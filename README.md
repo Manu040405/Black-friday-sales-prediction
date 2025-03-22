@@ -46,7 +46,63 @@ Edit
 ---
 
 ## 💻 Run It Locally
-
 ### 1. Clone the repository
 
-<pre> ``` 1. Clone the repository git clone https://github.com/Manu040405/Black-friday-sales-prediction.git cd Black-friday-sales-prediction 2. Install dependencies pip install -r requirements.txt 3. Run the app streamlit run app.py 🚀 Deployment on Render This app uses a render.yaml file for automatic deployment via Render's Blueprint feature. render.yaml ------------ services: - type: web name: black-friday-streamlit-app env: python plan: free buildCommand: pip install -r requirements.txt startCommand: streamlit run app.py --server.port=$PORT --server.enableCORS=false repo: https://github.com/Manu040405/Black-friday-sales-prediction branch: main autoDeploy: true requirements.txt ---------------- streamlit pandas numpy scikit-learn matplotlib plotly 📊 Data & Model Info --------------------- Dataset: Black Friday Sales Dataset from Kaggle Target Variable: Purchase (amount spent) Features Used: Age, Gender, Occupation, Product Category, City Category, Stay Duration, etc. Model Used: RandomForestRegressor (or similar) 🙌 Acknowledgements -------------------- Streamlit – UI framework Render – Hosting & Deployment Kaggle Black Friday Dataset 📫 Contact Created by Manu040405 ``` </pre>
+```bash
+git clone https://github.com/Manu040405/Black-friday-sales-prediction.git
+cd Black-friday-sales-prediction
+### 2. Install dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+3. Run the app
+bash
+Copy
+Edit
+streamlit run app.py
+🚀 Deployment on Render
+This app uses a render.yaml file for automatic deployment via Render's Blueprint feature.
+
+render.yaml
+yaml
+Copy
+Edit
+services:
+  - type: web
+    name: black-friday-streamlit-app
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port=$PORT --server.enableCORS=false
+    repo: https://github.com/Manu040405/Black-friday-sales-prediction
+    branch: main
+    autoDeploy: true
+requirements.txt
+txt
+Copy
+Edit
+streamlit
+pandas
+numpy
+scikit-learn
+matplotlib
+plotly
+📊 Data & Model Info
+Dataset: Black Friday Sales Dataset from Kaggle
+
+Target Variable: Purchase (amount spent)
+
+Features Used: Age, Gender, Occupation, Product Category, City Category, Stay Duration, etc.
+
+Model Used: RandomForestRegressor (or similar)
+
+🙌 Acknowledgements
+Streamlit – UI framework
+
+Render – Hosting & Deployment
+
+Kaggle Black Friday Dataset
+
+📫 Contact
+Created by Manu040405
