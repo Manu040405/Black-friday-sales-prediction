@@ -105,12 +105,6 @@ The model is trained on the [Black Friday Sales Dataset](https://www.kaggle.com/
 - **537,577 Records** of customer purchase information
 - **Target Variable**: Purchase amount in dollars
 
-## 🔮 Future Enhancements
-
-- [ ] Implement A/B testing for different ML models
-- [ ] Add product recommendation system
-- [ ] Develop time series forecasting for sales trends
-- [ ] Integrate with inventory management systems
 
 ## 🙌 Acknowledgements
 
