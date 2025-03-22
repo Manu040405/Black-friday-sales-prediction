@@ -20,7 +20,7 @@ A **Streamlit-based web application** that predicts customer purchase amounts du
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="" width="45%" alt="Login Screen"/>
+  <img src="https://github.com/Manu040405/Black-friday-sales-prediction/blob/main/loginpage.png" width="45%" alt="Login Screen"/>
   <img src="" width="45%" alt="Prediction Interface"/>
 </div>
 
