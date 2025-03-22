@@ -20,8 +20,8 @@ A **Streamlit-based web application** that predicts customer purchase amounts du
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="https://github.com/Manu040405/Black-friday-sales-prediction/raw/main/screenshots/login.png" width="45%" alt="Login Screen"/>
-  <img src="https://github.com/Manu040405/Black-friday-sales-prediction/raw/main/screenshots/prediction.png" width="45%" alt="Prediction Interface"/>
+  <img src="" width="45%" alt="Login Screen"/>
+  <img src="" width="45%" alt="Prediction Interface"/>
 </div>
 
 ## 📁 Project Structure
@@ -122,7 +122,3 @@ The model is trained on the [Black Friday Sales Dataset](https://www.kaggle.com/
 ## 📫 Contact
 
 Created by [@Manu040405](https://github.com/Manu040405) - feel free to contact me!
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
