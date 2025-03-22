@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: black-friday-streamlit-app
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port=$PORT --server.enableCORS=false
+    repo: https://github.com/Manu040405/Black-friday-sales-prediction
+    branch: main
+    autoDeploy: true
