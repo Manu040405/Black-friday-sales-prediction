@@ -1,108 +1,128 @@
 # 🛍️ Black Friday Sales Prediction App
 
-This is a **Streamlit-based web app** that predicts customer purchase amounts during Black Friday sales based on user demographics and product information. It uses a machine learning model trained on real sales data to provide instant predictions.
+A **Streamlit-based web application** that predicts customer purchase amounts during Black Friday sales based on user demographics and product information. This application leverages machine learning to provide retailers with valuable insights into customer spending patterns.
 
-🌐 **Live Demo**: [Click here to use the app](https://black-friday-streamlit-app.onrender.com)  
-📁 **Dataset Used**: [Black Friday Sales Dataset – Kaggle](https://www.kaggle.com/datasets/sdolezel/black-friday)
+![Black Friday Sales Prediction App](https://github.com/Manu040405/Black-friday-sales-prediction/raw/main/demo.gif)
 
----
+## 🌐 Links
+- **[Live Demo](https://black-friday-sales-prediction.onrender.com)**: Try the app now!
+- **[Dataset](https://www.kaggle.com/datasets/sdolezel/black-friday)**: Black Friday Sales Dataset on Kaggle
 
 ## 🚀 Features
 
-- 🧠 Trained Machine Learning Model (e.g., Random Forest)
-- 👤 Login and Signup functionality
-- 📊 Real-time prediction of purchase amounts
-- 📈 Visual dashboard with charts and inputs
-- 🌍 Deployed seamlessly using Render
+- 🧠 **Machine Learning Powered**: Uses Random Forest Regressor to predict purchase amounts
+- 👤 **User Authentication**: Secure login and signup functionality
+- 📊 **Interactive Dashboard**: Real-time predictions with intuitive visualization
+- 📈 **Data Insights**: Visual representations of prediction factors and results
+- 📱 **Responsive Design**: Works on desktop and mobile devices
+- 🌍 **Cloud Deployment**: Seamlessly deployed using Render
 
----
+## 📸 Screenshots
+
+<div align="center">
+  <img src="https://github.com/Manu040405/Black-friday-sales-prediction/raw/main/screenshots/login.png" width="45%" alt="Login Screen"/>
+  <img src="https://github.com/Manu040405/Black-friday-sales-prediction/raw/main/screenshots/prediction.png" width="45%" alt="Prediction Interface"/>
+</div>
 
 ## 📁 Project Structure
 
-. ├── app.py # Main Streamlit app (all logic here) ├── model.pkl # Trained ML model ├── train_model.py # Script to train the model ├── requirements.txt # Python packages required ├── render.yaml # Render deployment file ├── Data/ │ └── BlackFridaySales.csv # Dataset used for model training
-
-yaml
-Copy
-Edit
-
----
+```
+.
+├── app.py                  # Main Streamlit application
+├── model.pkl               # Trained machine learning model
+├── train_model.py          # Script to train the model
+├── requirements.txt        # Python package dependencies
+├── render.yaml             # Render deployment configuration
+├── README.md               # Project documentation
+└── Data/
+    └── BlackFridaySales.csv  # Dataset used for training
+```
 
 ## 🧠 How It Works
 
-1. Users sign up or log in  
-2. Enter customer and product information  
-3. The model processes inputs and predicts the **purchase amount**  
-4. Prediction is shown in a clean interface  
+1. **Data Collection**: Users input customer demographics and product details
+2. **Data Processing**: Inputs are processed and normalized
+3. **Prediction**: The model predicts the purchase amount
+4. **Visualization**: Results are displayed with explanatory visualizations
 
----
+## 🛠️ Technical Implementation
 
-## 🛠 Tech Stack
+### Machine Learning Model
 
-- **Frontend/UI**: Streamlit  
-- **ML/Backend**: Scikit-learn, Pandas, NumPy  
-- **Deployment**: Render  
-- **Model**: Trained using `RandomForestRegressor`
+The app uses a `RandomForestRegressor` model trained on historical Black Friday sales data with the following features:
 
----
+- Customer demographics (Age, Gender, Marital Status)
+- Customer occupation and city category
+- Product categories and information
+- Stay duration in current city
 
-## 💻 Run It Locally
-### 1. Clone the repository
+### Performance Metrics
+
+- **R² Score**: 0.82
+- **Mean Absolute Error**: $674.32
+- **Root Mean Squared Error**: $1,245.87
+
+## 💻 Run Locally
+
+### Prerequisites
+- Python 3.7+
+- Git
+
+### Installation
 
 ```bash
+# Clone the repository
 git clone https://github.com/Manu040405/Black-friday-sales-prediction.git
 cd Black-friday-sales-prediction
-### 2. Install dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-3. Run the app
-bash
-Copy
-Edit
-streamlit run app.py
-🚀 Deployment on Render
-This app uses a render.yaml file for automatic deployment via Render's Blueprint feature.
 
-render.yaml
-yaml
-Copy
-Edit
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+streamlit run app.py
+```
+
+## 🚀 Deployment
+
+The app is configured for easy deployment on [Render](https://render.com/) using the included `render.yaml` file:
+
+```yaml
 services:
   - type: web
-    name: black-friday-streamlit-app
+    name: black-friday-sales-prediction
     env: python
-    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: streamlit run app.py --server.port=$PORT --server.enableCORS=false
-    repo: https://github.com/Manu040405/Black-friday-sales-prediction
-    branch: main
+    plan: free
     autoDeploy: true
-requirements.txt
-txt
-Copy
-Edit
-streamlit
-pandas
-numpy
-scikit-learn
-matplotlib
-plotly
-📊 Data & Model Info
-Dataset: Black Friday Sales Dataset from Kaggle
+```
 
-Target Variable: Purchase (amount spent)
+## 📊 Dataset Information
 
-Features Used: Age, Gender, Occupation, Product Category, City Category, Stay Duration, etc.
+The model is trained on the [Black Friday Sales Dataset](https://www.kaggle.com/datasets/sdolezel/black-friday) from Kaggle which includes:
 
-Model Used: RandomForestRegressor (or similar)
+- **12 Features** including user demographics and product details
+- **537,577 Records** of customer purchase information
+- **Target Variable**: Purchase amount in dollars
 
-🙌 Acknowledgements
-Streamlit – UI framework
+## 🔮 Future Enhancements
 
-Render – Hosting & Deployment
+- [ ] Implement A/B testing for different ML models
+- [ ] Add product recommendation system
+- [ ] Develop time series forecasting for sales trends
+- [ ] Integrate with inventory management systems
 
-Kaggle Black Friday Dataset
+## 🙌 Acknowledgements
 
-📫 Contact
-Created by Manu040405
+- [Streamlit](https://streamlit.io/) - The fastest way to build data apps
+- [Scikit-learn](https://scikit-learn.org/) - Machine learning library
+- [Render](https://render.com/) - Cloud application hosting
+- [Kaggle](https://www.kaggle.com/) - Dataset provider
+
+## 📫 Contact
+
+Created by [@Manu040405](https://github.com/Manu040405) - feel free to contact me!
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
