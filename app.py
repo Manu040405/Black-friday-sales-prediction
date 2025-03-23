@@ -1,3 +1,7 @@
+import os
+os.environ["STREAMLIT_SERVER_HEADLESS"] = "true"
+os.environ["STREAMLIT_SERVER_ENABLECORS"] = "false"
+
 import streamlit as st
 import pickle
 import pandas as pd
